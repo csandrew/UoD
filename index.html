@@ -1,0 +1,262 @@
+<!DOCTYPE html><!--Declares the document is an HTML 5-->
+<html lang="en"><!--Root-->
+
+<head><!--Contains behind the scenes elements of the web page-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Dukes</title><!--Defines title displayed on the browser-->
+    <!--Links external stylesheets or resources-->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Kaushan+Script&family=Macondo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Special+Elite&display=swap"
+        rel="stylesheet">
+    <!--Fontawsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body><!--Enclose all visible content-->
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Navigation -->
+        <header>
+            <nav>
+                <div><img src="UoDLogoR.png" alt="logo image" style="width: 200px; height: auto;"></div>
+                <!-- <div class="logo">University of Dukes</div> -->
+
+                <div class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="#index.html"><i class="fa-solid fa-house-user"></i> Home</a></li>
+                        <li><a href="#admissions-form"><i class="fa-solid fa-ticket"></i> Admissions</a></li>
+                        <li><a href="#campus-life"><i class="fa-solid fa-building"></i> Campus-Life</a></li>
+                        <li><a href="#academics"><i class="fa-solid fa-book"></i> Academics</a></li>
+                        <li><a href="#about"><i class="fa-solid fa-address-card"></i> About Us</a></li>
+                    </ul>
+                    <div class="social-links">
+                        <h3>Follow Us On:</h3>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </nav>
+            </nav>
+        </header>
+
+        <!-- Image Slider -->
+        <div class="swiper mySwiper">
+
+            <!-- Hero Text Content -->
+            <div class="hero-content-parent">
+                <div class="hero-content">
+                    <h1>Welcome to University of Dukes</h1>
+                    <p>A community that makes sustainable contributions to scientific, scholarly, and humanitarian
+                        progress.</p>
+                    <a href="#admissions-form" class="btn">Apply Now</a>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/campus-04.jpg" alt="A scenic view of our University campus"></div>
+                <div class="swiper-slide"><img src="images/graduation-01.jpg" alt="Graduation at UoD"></div>
+                <div class="swiper-slide"><img src="images/campus-00.jpg" alt="Scenic view"></div>
+                <div class="swiper-slide"><img src="images/sunset.jpg" alt="Graduation ceremony"></div>
+
+            </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Pagination (dots) -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <hr><!--horizontal line-->
+
+    <!--About us section-->
+    <section class="about-us" id="about">
+        <h2>Where Innovation Meets Excellence!</h2>
+        <p>At University of Dukes, we are committed to academic excellence, innovation, and holistic development. We
+            equip students with knowledge, skills, and values that drive sustainable change in society. Through
+            cutting-edge research, a dynamic learning environment, and a culture of creativity, we nurture leaders and
+            visionaries ready to shape the future. </p>
+        <p>Join us in the pursuit of knowledge and excellence!</p>
+
+        <div class="about-us-child">
+            <div id="vision">
+
+                <h3>Our Vision</h3>
+                <p>To be a Centre of Excellence in Scholarship, Research, and Training. To be a dynamic and innovative
+                    information hub that empowers lifelong learning, and fosters research excellence.</p>
+
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <div id="mission">
+                <h3>Our Mission</h3>
+                <p>To provide a holistic education that enables students to develop an enquiring mind and to pursue
+                    truth as well as be socially balanced and responsible members of the society.</p>
+            </div>
+        </div>
+
+        <h1>Awards, Certifications & Credentials</h1>
+        <div class="container-credentials" id="awardsList"></div>
+        <script>
+            const awards = [
+                { title: "Best University Award 2024", image: "./images/trophy.jpg" },
+                { title: "ISO 9001 Certified", image: "./images/ISO9001.webp" },
+                { title: "Global Education Excellence", image: "./images/trophy 1.jpg" },
+                { title: "Accredited by ABC Council", image: "./images/kit.jpg" }
+            ];
+
+            const container = document.getElementById("awardsList");
+
+            awards.forEach(award => {
+                const card = document.createElement("div");
+                card.classList.add("card");
+                card.innerHTML = `
+                    <img src="${award.image}" alt="${award.title}">
+                    <h3>${award.title}</h3>
+                `;
+                container.appendChild(card);
+            });
+        </script>
+
+    </section>
+
+    <hr><!--horizontal line-->
+
+    <!-- Features Section -->
+    <section class="features">
+
+        <div class="feature" id="academics">
+            <img src="images/study.jpg" alt="Medical equipment used in Dukes University's medical school">
+            <h3>Academics</h3>
+            <p>Our programs are ranked among the best in the world.</p>
+        </div>
+
+        <div class="feature">
+            <img src="images/engineering.jpg" alt="A researcher working in the innovation labs">
+            <h3>Innovation Labs</h3>
+            <p>Dukes researchers created the first programmable, logical quantum processor.</p>
+        </div>
+
+        <div class="feature" id="campus-life">
+            <img src="images/tennis.jpg" alt="Students playing tennis on campus">
+            <h3>Vibrant Campus Life</h3>
+            <p>Clubs, athletics, and cultural events make your university life exciting.</p>
+        </div>
+
+    </section>
+
+    <hr><!--horizontal line-->
+
+    <!-- Admissions Form Section -->
+    <section class="container-form">
+        <section id="admissions-form">
+            <h2>Registration Form</h2>
+            <form action="submit_form.php" method="post">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="names">
+                        <div>
+                            <div>
+                                <label for="first-name">First Name:</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            
+                            <div>
+                                <label for="dob">Date of Birth:</label>
+                                <input type="date" id="dob" name="dob" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                            
+                            <div>
+                                <label for="gender">Gender:</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Contact Details</legend>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Other Information</legend>
+
+                    <label for="course">Select Course:</label>
+                    <select id="course" name="course" required>
+                        <option value="">Select</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Business Administration">Business Administration</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Medicine">Medicine</option>
+                        <option value="Law">Law</option>
+                        <option value="International Relations">International Relations</option>
+                    </select>
+                    <label for="source">How you found out about University of Dukes</label>
+                    <select id="source" name="source">
+                        <option value="" disabled selected>Select value</option>
+                        <option value="social">Social Media</option>
+                        <option value="friend">Friend</option>
+                        <option value="website">Website</option>
+                    </select>
+
+                    <div class="consent">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">I consent to the collection of this data and its processing in accordance with University of Dukes Privacy Policy.</label>
+                    </div>
+
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+    </section>
+
+        <hr><!--horizontal line-->
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 University of Dukes. All Rights Reserved.</p>
+        </footer>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- Custom Script -->
+        <script src="js/myScript.js"></script>
+</body>
+
+</html>
